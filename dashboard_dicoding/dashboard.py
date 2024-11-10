@@ -29,10 +29,12 @@ def read_csv_file(file_path):
 # Contoh penggunaan
 file_path = 'data_day.csv'
 try:
-    day_df = pd.DataFrame(read_csv_file(file_path))
-    print(day_df)
+    data = read_csv_file(file_path)
+    print(data)
 except FileNotFoundError as e:
     print(e)
+
+day_df = pd.DataFrame(data)
 
 st.header("Pengaruh Musim Terhadap Penyewaan Sepeda (Dalam Persentase)")
 
